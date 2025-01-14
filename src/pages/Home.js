@@ -41,7 +41,7 @@ const authors = [
 
 function Home() {
   const handleAuthorClick = (id) => {
-    window.location.href = `http://localhost:8080/api/authors/${id}`;
+    window.location.href = `http://18.221.194.194:8080/api/authors/${id}`;
   };
 
   return (
