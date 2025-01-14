@@ -1,3 +1,6 @@
+import React from "react";
+import AuthorCard from "../components/AuthorCard";
+
 const authors = [
   {
     name: "Franz Kafka",
