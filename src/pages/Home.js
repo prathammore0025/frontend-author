@@ -1,6 +1,5 @@
 import React from "react";
 import AuthorCard from "../components/AuthorCard";
-export default Home;
 
 const authors = [
   {
@@ -39,3 +38,26 @@ const authors = [
     id: "kaul",
   },
 ];
+
+function Home() {
+  const handleAuthorClick = (id) => {
+    window.location.href = `http://localhost:8080/api/authors/${id}`;
+  };
+
+  return (
+    <main>
+      <div className="author-grid">
+        {authors.map((author) => (
+          <AuthorCard
+            key={author.id}
+            name={author.name}
+            photo={author.photo}
+            onClick={() => handleAuthorClick(author.id)}
+          />
+        ))}
+      </div>
+    </main>
+  );
+}
+
+export default Home;
